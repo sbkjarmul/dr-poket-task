@@ -6,7 +6,7 @@ const GOOGLE_API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
 
 export function Tracker() {
     const [directions, setDirections] = useState();
-    const center = { lat: 37.382376, lng: -122.00722 };
+    const center = routes[0];
     const { isLoaded } = useJsApiLoader({
         googleMapsApiKey: String(GOOGLE_API_KEY),
     });
@@ -43,7 +43,7 @@ export function Tracker() {
     return (
         <>
             <GoogleMap
-                mapContainerStyle={{ height: "400px", width: "100%" }}
+                mapContainerStyle={{ height: "100%", width: "100%" }}
                 zoom={10}
                 center={center}
                 options={{
