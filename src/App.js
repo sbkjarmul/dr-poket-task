@@ -1,11 +1,13 @@
 import "./App.css";
-import { MapComponent } from "./components/map-component";
+import { Tracker } from "./components/tracker/tracker";
+import { Chart } from "./components/chart/";
 
 function App() {
     return (
         <div className="App">
             <header className="App-header">
-                <MapComponent />
+                <Tracker />
+                <Chart />
             </header>
         </div>
     );

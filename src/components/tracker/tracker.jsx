@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { GoogleMap, useJsApiLoader, DirectionsRenderer } from "@react-google-maps/api";
-import { routes } from "../constants/directions.js";
+import { routes } from "./constants/index.js";
 
 const GOOGLE_API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
 
-export function MapComponent() {
+export function Tracker() {
     const [directions, setDirections] = useState();
     const center = { lat: 37.382376, lng: -122.00722 };
     const { isLoaded } = useJsApiLoader({
